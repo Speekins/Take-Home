@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { NewsCard } from '../NewsCard/NewsCard'
 import './Main.css'
 
-const Main = ({ articles, filteredArticles, loading }) => {
+const Main = ({ articles, filteredArticles, loading, setModal }) => {
 
   if (loading) {
     return (
@@ -13,7 +13,12 @@ const Main = ({ articles, filteredArticles, loading }) => {
 
   if (!!filteredArticles) {
     const cleanData = filteredArticles.filter(article => !!article.title)
-    const formattedArticles = cleanData.map((article, idx) => <NewsCard article={article} key={idx} />)
+    const formattedArticles = cleanData.map(article =>
+      <NewsCard
+        article={article}
+        key={article.created_date}
+        setModal={setModal}
+      />)
 
     return (
       <div className='article-container'>
@@ -23,7 +28,12 @@ const Main = ({ articles, filteredArticles, loading }) => {
   }
 
   const cleanData = articles.filter(article => !!article.title)
-  const formattedArticles = cleanData.map((article, idx) => <NewsCard article={article} key={idx} />)
+  const formattedArticles = cleanData.map(article =>
+    <NewsCard
+      article={article}
+      key={article.created_date}
+      setModal={setModal}
+    />)
 
   return (
     <div className='article-container'>
