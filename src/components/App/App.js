@@ -15,7 +15,8 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "success": return { ...state, articles: action.payload, loading: false }
+    case "success": return { ...state, articles: action.payload, filteredArticles: null, loading: false }
+    case "search": return { ...state, filteredArticles: action.payload }
     case "loading": return { ...state, loading: true }
     default: return { ...state }
   }
@@ -37,18 +38,23 @@ const App = () => {
       .then(response => dispatch({ type: "success", payload: response.results }))
   }
 
+  const filterCurrentArticlesByTitle = (term) => {
+    const newSet = state.articles.filter(article => article.title.toLowerCase().includes(term.toLowerCase()))
+    dispatch({ type: "search", payload: newSet })
+  }
+
   return (
-    <>
+    <main>
       <div className='welcome-header'>
-        <h1>This is the App!</h1>
+        <h1>NEWSR</h1>
       </div>
-      <Searchbar getArticles={getArticles} />
+      <Searchbar getArticles={getArticles} filterCurrentArticlesByTitle={filterCurrentArticlesByTitle}/>
       <Main
         articles={state.articles}
         filteredArticles={state.filteredArticles}
         loading={state.loading}
       />
-    </>
+    </main>
   )
 }
 
