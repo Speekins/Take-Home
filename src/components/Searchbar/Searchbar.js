@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import './Searchbar.css'
 
 
 
 const Searchbar = props => {
+
+  const [searchTerm, setSearchTerm] = useState('')
+  const [filterValue, setFilterValue] = useState('home')
 
   const selections =
     <select name="filter" id="filter" value=''>
