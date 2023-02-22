@@ -1,0 +1,10 @@
+.single-news-card {
+  width: 300px;
+  height: auto;
+  border: 1px black solid
+}
+
+.news-card-img {
+  width: 100%;
+  height: auto
+}
