@@ -50,13 +50,12 @@ const App = () => {
     dispatch({ type: "modal", payload: modalArticle })
   }
 
-  console.log(state.modal)
   return (
     <main>
       <div className='welcome-header'>
-        <h1>NEWSR</h1>
+        <h1>NOOZ</h1>
       </div>
-      {state.modal && <Modal modal={state.modal} />}
+      {state.modal && <Modal modal={state.modal} setModal={setModal} />}
       <Searchbar getArticles={getArticles} filterCurrentArticlesByTitle={filterCurrentArticlesByTitle} />
       <Main
         articles={state.articles}
