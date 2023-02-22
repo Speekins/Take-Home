@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import './Searchbar.css'
 
@@ -9,9 +9,12 @@ const Searchbar = ({ getArticles }) => {
   const [searchTerm, setSearchTerm] = useState('')
   const [filterValue, setFilterValue] = useState('home')
 
+  useEffect(() => {
+    getArticles(filterValue)
+  }, [filterValue])
+
   const handleChange = (e) => {
     setFilterValue(e.target.value)
-    getArticles(filterValue)
   }
 
   const selections =

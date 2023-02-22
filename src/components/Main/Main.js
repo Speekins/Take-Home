@@ -10,7 +10,8 @@ const Main = ({ articles, loading }) => {
       <p>Loading...</p>
     )
   }
-  const formattedArticles = articles.map((article, idx) => <NewsCard article={article} key={idx}/>)
+  const cleanData = articles.filter(article => !!article.abstract)
+  const formattedArticles = cleanData.map((article, idx) => <NewsCard article={article} key={idx}/>)
 
   return (
     <div className='article-container'>
