@@ -235,6 +235,6 @@ Distributed under the MIT License.
 [stars-shield]: https://img.shields.io/github/stars/board-together/FE-Board-Together.svg?style=for-the-badge
 [stars-url]: https://github.com/board-together/FE-Board-Together/stargazers
 [issues-shield]: https://img.shields.io/github/issues/board-together/FE-Board-Together.svg?style=for-the-badge
-[issues-url]: https://github.com/board-together/FE-Board-Together/issues
+[issues-url]: https://github.com/speekins/take-home/issues
 [license-shield]: https://img.shields.io/github/license/board-together/FE-Board-Together.svg?style=for-the-badge
 [license-url]: https://github.com/board-together/FE-Board-Together/blob/master/LICENSE.txt
