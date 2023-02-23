@@ -102,7 +102,7 @@ Nooz is a FrontEnd application utilizing a React, maintained integration with Ci
 <!-- Available Endpoints -->
 ## Available Endpoints
 The application accesses a single endpoint with a variety of queries:<br>
-*Example* https://api.nytimes.com/svc/topstories/v2/{QUERY_FIELD}.json?api-key={INSERT_API_KEY_HERE}
+*Example* https://api.nytimes.com/svc/topstories/v2/{SECTION}.json?api-key={INSERT_API_KEY_HERE}
 
 Queries By Section:
 The possible section value are: `arts`, `automobiles`, `books`, `business`, `fashion`, `food`, `health`, `home`, `insider`, `magazine`, `movies`, `nyregion`, `obituaries`, `opinion`, `politics`, `realestate`, `science`, `sports`, `sundayreview`, `technology`, `theater`, `t-magazine`, `travel`, `upshot`, `us`, and `world`.
