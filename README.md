@@ -8,14 +8,14 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/board-together">
+  <a href="https://github.com/speekins/take-home">
     <img src="https://github.com/board-together/BE-Board-Together/raw/main/public/board-together.png" alt="Logo">
   </a>
 
-  <h1 align="center">Board (games) Together!</h3>
+  <h1 align="center">NOOZ</h3>
 
   <h3 align="center">
-    Board Game Swap Application
+    News Article Application
     <br />
   </h3>
 </div>
@@ -51,7 +51,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Board Together is a board game platform that allows users to create their own profiles and list their favorite board games. It utilizes a React FrontEnd and GraphQL & PostgreSQL Backend to create a seamless user experience and features API calls to the popular Board Game Atlas API to provide up-to-date information about various board games. With this platform, board game enthusiasts can keep track of their collection, discover new games to play, and connect with others to share the games they have collected. The platform is easy to use and accessible to anyone who loves board games or wants to learn more about them.
+Nooz is an information and news application for accessing trending NYT articles by catergory. It utilizes a React FrontEnd to create a seamless user experience and utilizes the fetch API to make calls to the New York Times Top Articles API to provide up-to-date information. With this platform, users can visit the site to see all current top headlines, click on the story to get more info, and be taken to the NYT website for access to the article itself.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -79,19 +79,16 @@ Board Together is a full-stack application combining a React frontend deployed t
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- Database Schema -->
-### Database Schema
-
-<img src="https://github.com/board-together/BE-Board-Together/raw/main/public/Schema%202-6-23.png" alt="Database-Schema" width="90%" height="90%">
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- Learning Goals -->
-### Learning Goals
+### Learning Goals/Benchmarks
 
-* Learn and Implement Apollo/GraphQL into the React application to make API calls.
-* Work in a full-stack development team.
-* Utilize continuous integration with CircleCI.
+* Clearly communicate thought and planning process
+* Clearly communicate use of code and application structure
+* A strong understanding of React JS and Front-End best practices
+* Your ability to prioritize for MVP
+* An understanding of basic usability practices and standards
+* A clear hierarchy of information
+* Clean, well thought out code
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -100,21 +97,13 @@ Board Together is a full-stack application combining a React frontend deployed t
 
 Board Together utilizes a service oriented architecture with separate backend and frontend services. Installation instructions for the frontend repository below. Backend installation instructions can be found in the repository section. The Postman mock server below can be used to test the available endpoints. Expected request and response formats are listed for CRUD functionality.
 
-<!-- Repositories -->
-### Repositories
-
-* <b>Frontend:</b> https://github.com/board-together/FE-Board-Together <br />
-* <b>Backend:</b> https://github.com/board-together/BE-Board-Together <br />
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- Frontend Repository Installation -->
 ### Frontend Repository Installation
 
 <b>UPDATE FOR FRONTEND</b>
 
 1. Clone the repository.
-1. cd into the target directory `FE-Board-Together`.
+1. cd into the target directory `take-home`.
 1. Install all packages: `npm install`.
 1. Open application: `npm start`.
 1. You will be automatically navigated to your browser of choice.
@@ -125,526 +114,9 @@ Board Together utilizes a service oriented architecture with separate backend an
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- Available Endpoints -->
-## Available GraphQL Endpoints
-
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/25666683-0ebb6dbb-8b11-460e-8585-8adaf17a4211?action=collection%2Ffork&collection-url=entityId%3D25666683-0ebb6dbb-8b11-460e-8585-8adaf17a4211%26entityType%3Dcollection%26workspaceId%3D744a08a3-dcad-44e1-bb68-becc0c7dbc17)
-
-Endpoints are run through GraphQL queries. Expand a section below for query requests and expected responses.
-
-### <ins>User Queries</ins>
-<details close>
-  <summary>Find All Users</summary><br>
-
-Returns a list of all current users in database.<br>
-
-```query
-query {
-    users {
-        id
-        username
-    }  
-}
-```
-
-Expected Response:
-
- ```json
-{
-    "data": {
-        "users": [
-            {
-                "id": 1,
-                "username": "Pickafloof"
-            },
-            {
-                "id": 2,
-                "username": "Floofything"
-            }
-        ]  
-    }
-}
-```
-</details><br>
-
-<details close>
-  <summary>Find a Specific User</summary><br>
-
-Return information about a specific user in the database.<br>
-
-```query
-query {
-  user(username: "emerita") {
-    id
-    username
-    userGames {
-      id
-      userId
-      gameId
-      status
-      borrowerId
-      game {
-        id
-        boardGameAtlasId
-        url
-        name
-        yearPublished
-        minPlayers
-        maxPlayers
-        minPlaytime
-        maxPlaytime
-        minAge
-        description
-        thumbUrl
-        imageUrl
-      }
-    }
-    borrowedGames {
-      id	
-      userId
-      gameId
-      status
-      borrowerId
-      game {
-        id
-        boardGameAtlasId
-        url
-        name
-        yearPublished
-        minPlayers
-        maxPlayers
-        minPlaytime
-        maxPlaytime
-        minAge
-        description
-        thumbUrl
-        imageUrl
-      }
-    }
-  }
-}
-```
-
-Expected Response:
-
- ```json
-{
-  "data": {
-    "user": {
-      "id": "1",
-      "username": "emerita",
-      "userGames": [
-        {
-          "id": "1",
-          "userId": 1,
-          "gameId": 1,
-          "status": 0,
-          "borrowerId": 1,
-          "game": {
-            "id": "1",
-            "boardGameAtlasId": "abd6a0",
-            "url": "http://keeling.net/jae.dach",
-            "name": "Kirby's Epic Yarn",
-            "yearPublished": 1998,
-            "minPlayers": 1,
-            "maxPlayers": 13,
-            "minPlaytime": 19,
-            "maxPlaytime": 39,
-            "minAge": 1,
-            "description": "Commodi tempora dolorem. Placeat nihil sunt. Ut perspiciatis qui.",
-            "thumbUrl": "http://mcclure.org/bertram.moen",
-            "imageUrl": "https://loremflickr.com/300/300"
-          }
-        }
-      ],
-      "borrowedGames": [
-        {
-          "id": "1",
-          "userId": 1,
-          "gameId": 1,
-          "status": 0,
-          "borrowerId": 1,
-          "game": {
-            "id": "1",
-            "boardGameAtlasId": "abd6a0",
-            "url": "http://keeling.net/jae.dach",
-            "name": "Kirby's Epic Yarn",
-            "yearPublished": 1998,
-            "minPlayers": 1,
-            "maxPlayers": 13,
-            "minPlaytime": 19,
-            "maxPlaytime": 39,
-            "minAge": 1,
-            "description": "Commodi tempora dolorem. Placeat nihil sunt. Ut perspiciatis qui.",
-            "thumbUrl": "http://mcclure.org/bertram.moen",
-            "imageUrl": "https://loremflickr.com/300/300"
-          }
-        },
-        {
-          "id": "2",
-          "userId": 2,
-          "gameId": 2,
-          "status": 0,
-          "borrowerId": 1,
-          "game": {
-            "id": "2",
-            "boardGameAtlasId": "ee0b20",
-            "url": "http://hane.io/cecil",
-            "name": "Team Fortress 2",
-            "yearPublished": 2016,
-            "minPlayers": 2,
-            "maxPlayers": 7,
-            "minPlaytime": 26,
-            "maxPlaytime": 4,
-            "minAge": 6,
-            "description": "Nobis fugiat voluptatem. Et quasi officia. Ut officiis doloremque.",
-            "thumbUrl": "http://glover-stoltenberg.biz/monique",
-            "imageUrl": "https://loremflickr.com/300/300"
-          }
-        },
-        {
-          "id": "3",
-          "userId": 3,
-          "gameId": 3,
-          "status": 0,
-          "borrowerId": 1,
-          "game": {
-            "id": "3",
-            "boardGameAtlasId": "85c360",
-            "url": "http://treutel.name/adella",
-            "name": "Animal Crossing: New Leaf",
-            "yearPublished": 1929,
-            "minPlayers": 1,
-            "maxPlayers": 13,
-            "minPlaytime": 17,
-            "maxPlaytime": 21,
-            "minAge": 7,
-            "description": "Ut consectetur sed. Qui alias iusto. Iusto autem aut.",
-            "thumbUrl": "http://hilpert.io/robt",
-            "imageUrl": "https://loremflickr.com/300/300"
-          }
-        },
-        {
-          "id": "6",
-          "userId": 6,
-          "gameId": 6,
-          "status": 0,
-          "borrowerId": 1,
-          "game": {
-            "id": "6",
-            "boardGameAtlasId": "35999c",
-            "url": "http://glover-mohr.com/alaina",
-            "name": "Luigi's Mansion",
-            "yearPublished": 2002,
-            "minPlayers": 2,
-            "maxPlayers": 17,
-            "minPlaytime": 6,
-            "maxPlaytime": 29,
-            "minAge": 11,
-            "description": "Sed ea nostrum. Porro doloremque nemo. Est impedit minima.",
-            "thumbUrl": "http://stiedemann-moore.org/victor_koelpin",
-            "imageUrl": "https://loremflickr.com/300/300"
-          }
-        },
-        {
-          "id": "10",
-          "userId": 10,
-          "gameId": 10,
-          "status": 0,
-          "borrowerId": 1,
-          "game": {
-            "id": "10",
-            "boardGameAtlasId": "a1d70a",
-            "url": "http://mosciski.com/zachary_nolan",
-            "name": "Half-Life: Opposing Force",
-            "yearPublished": 1987,
-            "minPlayers": 2,
-            "maxPlayers": 5,
-            "minPlaytime": 20,
-            "maxPlaytime": 4,
-            "minAge": 3,
-            "description": "Officiis magni dolor. Voluptas qui necessitatibus. Voluptatem dicta accusantium.",
-            "thumbUrl": "http://langworth.info/florentino",
-            "imageUrl": "https://loremflickr.com/300/300"
-          }
-        }
-      ]
-    }
-  }
-}
-```
-</details><br>
-
-<details close>
-  <summary>Create a New User</summary><br>
-
-Create a new user in the database.<br>
-
-```query
-mutation {
-    createUser(input:{username: "Foofything"}) {
-        user {
-            id
-            username
-        }
-        errors
-    }
-}
-```
-
-Expected Response:
-
- ```json
-{
-    "data": {
-        "user": {
-            "id": "11",
-            "username": "Floofything"
-        },
-        "errors": []
-    }
-}
-```
-</details><br>
-
-<details close>
-  <summary>Delete a User</summary><br>
-
-Deletes a user in the database.<br>
-
-```query
-mutation {
-  deleteUser(input: {id: 2}) {
-      id
-      errors
-   }
-}
-```
-
-Expected Response:
-
- ```json
-{
-  "data": {
-    "deleteUser": {
-      "id": "2",
-      "errors": []
-    }
-  }
-}
-```
-</details><br>
-
-### <ins>User Games</ins>
-
-<details close>
-  <summary>Save a Game to a User</summary><br>
-
-This creates a game if it does not exist in the database. It also creates a relationship between the game and the given user. The response will give a unique UserGame ID that is used in other queries to update or delete the User and Game association.<br>
-
-```query
-mutation {
-  createUserGame(input: {
-    userId: 4,
-    boardGameAtlasId: "OIXt3DmJU0",
-    url: "https://www.boardgameatlas.com/game/OIXt3DmJU0/catan",
-    name: "Catan",
-    yearPublished: "1995",
-    minPlayers: "3",
-    maxPlayers: "4",
-    minPlaytime: "45",
-    maxPlaytime: "90",
-    minAge: "10",
-    description: "settlers of catan",
-    thumbUrl: "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1629324722072.jpg",
-    imageUrl: "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1629324722072.jpg"
-  }) {
-    user {
-      id
-      username
-      userGames {
-        id
-        userId
-        gameId
-        status
-        borrowerId
-        game {
-          id  
-          boardGameAtlasId
-          url
-          name
-          yearPublished
-          minPlayers
-          maxPlayers
-          minPlaytime
-          maxPlaytime
-          minAge
-          description
-          thumbUrl
-          imageUrl
-        }
-      }
-    }
-  }
-}
-```
-
-Expected Response:
-
- ```json
-{
-  "data": {
-    "createUserGame": {
-      "user": {
-        "id": "4",
-        "username": "fred.ferry",
-        "userGames": [
-          {
-            "id": "4",
-            "userId": 4,
-            "gameId": 4,
-            "status": 0,
-            "borrowerId": 1,
-            "game": {
-              "id": "4",
-              "boardGameAtlasId": "0a23b7",
-              "url": "http://parker.name/jonna.lakin",
-              "name": "Dota 2",
-              "yearPublished": 1922,
-              "minPlayers": 2,
-              "maxPlayers": 8,
-              "minPlaytime": 5,
-              "maxPlaytime": 43,
-              "minAge": 7,
-              "description": "Placeat voluptas vero. Autem et voluptatem. Maxime est ut.",
-              "thumbUrl": "http://schmeler.name/elia.beier",
-              "imageUrl": "https://loremflickr.com/300/300"
-            }
-          },
-          {
-            "id": "11",
-            "userId": 4,
-            "gameId": 11,
-            "status": 0,
-            "borrowerId": null,
-            "game": {
-              "id": "11",
-              "boardGameAtlasId": "OIXt3DmJU0",
-              "url": "https://www.boardgameatlas.com/game/OIXt3DmJU0/catan",
-              "name": "Catan",
-              "yearPublished": 1995,
-              "minPlayers": 3,
-              "maxPlayers": 4,
-              "minPlaytime": 45,
-              "maxPlaytime": 90,
-              "minAge": 10,
-              "description": "settlers of catan",
-              "thumbUrl": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1629324722072.jpg",
-              "imageUrl": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1629324722072.jpg"
-            }
-          }
-        ]
-      }
-    }
-  }
-}
-```
-</details><br>
-
-<details close>
-  <summary>Update a User and Game Association</summary><br>
-
-Update a UserGame in the database. Can be used for borrowing a game, returning a game and changing a game status to private. The ID required for query input will be the UserGame's unique ID.<br>
-
-```query
-mutation {
-    updateUserGame(input: { 
-      id: 7, 
-      borrowerId: 4, 
-      status: 1 }) 
-    {
-    userGame {
-      id
-      borrowerId
-      status
-    }
-      errors
-    }
-  }
-```
-
-Expected Response:
-
- ```json
-{
-  "data": {
-    "updateUserGame": {
-      "userGame": {
-        "id": "7",
-        "borrowerId": 4,
-        "status": 1
-      },
-      "errors": []
-    }
-  }
-}
-```
-</details><br>
-
-<details close>
-  <summary>Remove a User and Game Association</summary><br>
-
-Delete a game from a user's owned games list. The ID required for query input will be the UserGame's unique ID.<br>
-
-```query
-mutation {
-          deleteUserGame(input :{
-              id: 1
-              }) {
-              id
-              errors
-          }
-      }
-```
-
-Expected Response:
-
- ```json
-{
-    "data": {
-        "deleteUserGame": {
-            "id": "1",
-            "errors": []
-        }
-    }
-}
-```
-</details><br>
-
-### <ins>Search Queries</ins>
-
-<details close>
-  <summary>Search for Games</summary><br>
-
-Search for a game matching user input. Results include partial matches.<br>
-
-```query
-query {
-    searchGames(name: "Catan") {
-        boardGameAtlasId
-        url
-        name
-        yearPublished
-        minPlayers
-        maxPlayers
-        minPlaytime
-        maxPlaytime
-        minAge
-        description
-        thumbUrl
-        imageUrl
-    }
-}
-```
+## Endpoint(s)
+The application accesses a single endpoint with a variety of queries:<br>
+*Example* https://api.nytimes.com/svc/topstories/v2/home.json?api-key={INSERT_API_KEY_HERE}
 
 Expected Response:
 
