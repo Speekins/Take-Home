@@ -59,9 +59,7 @@ Nooz is an information and news application for accessing trending NYT articles 
 <!-- Deployment Information -->
 ### Deployment Information
 
-Nooz is a FrontEnd application utilizing a React, maintained integration with Circle CI, and tested with Cypress.io. The frontend handles client-side tasks and displays data from the backend, NYTimes Top Stories [API](https://developer.nytimes.com/docs/top-stories-product/1/overview). Deployment involves building the React frontend, integrating it with the Rails backend, and pushing the code to Heroku. The application can be accessed at the Heroku URL.
-
-* <a href="https://board-together.herokuapp.com/" alt="Heroku Deployment">Heroku Deployment</a><br>
+Nooz is a FrontEnd application utilizing a React, maintained integration with Circle CI, and tested with Cypress.io. The frontend handles client-side tasks and displays data from the backend, NYTimes Top Stories [API](https://developer.nytimes.com/docs/top-stories-product/1/overview).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -90,8 +88,6 @@ Nooz is a FrontEnd application utilizing a React, maintained integration with Ci
 
 <!-- Frontend Repository Installation -->
 ### Frontend Repository Installation
-
-<b>UPDATE FOR FRONTEND</b>
 
 1. Clone the repository.
 1. cd into the target directory `take-home`.
@@ -190,10 +186,11 @@ Expected Response:
 
 MVP
 
-* CRUD functionality for User and UserGames.
-* Search for a board game utilizing [Board Game Atlas API](https://www.boardgameatlas.com/api/docs/search).
-* Add board games to User collection.
-* Track board games you have borrowed and board games you have lent out.
+* Fetch data from third-party NYTimes Top Stories [API](https://developer.nytimes.com/docs/top-stories-product/1/overview).
+* Display a list of article data
+* A “detailed” view for each article (as opposed to summary/list view)
+* Listed articles will link to the detailed article view
+* Implement search, filter, OR sort functionality
 
 Stretch Goals
 
@@ -203,7 +200,7 @@ Stretch Goals
 * Ability to add comments or reviews to games you have, or have borrowed.
 * Email notifications for requests to borrow games.
 
-See the [open issues](https://github.com/board-together/FE-Board-Together/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/speekins/take-home/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -212,27 +209,15 @@ See the [open issues](https://github.com/board-together/FE-Board-Together/issues
 
 <table>
   <tr>
-    <td><img src="https://avatars.githubusercontent.com/u/110054994?s=150&v=4"></td>
     <td><img src="https://avatars.githubusercontent.com/u/74210902?s=150&v=4"></td>
-    <td><img src="https://avatars.githubusercontent.com/u/105405396?s=150&v=4"></td>
   </tr>
   <tr>
-    <td>Brett Kuhn</td>
     <td>Spencer Haka</td>
-    <td>Thomas Peterson</td>
   </tr>
   <tr>
-    <td>
-      <a href="https://github.com/bkuhn2">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/brett-kuhn/">LinkedIn</a>
-    </td>
     <td>
       <a href="https://github.com/Speekins">GitHub</a><br>
       <a href="https://www.linkedin.com/in/spencer-haka/">LinkedIn</a>
-    </td>
-    <td>
-      <a href="https://github.com/thomedpete">GitHub</a><br>
-      <a href="https://www.linkedin.com/in/thomas-peterson-web-dev/">LinkedIn</a>
     </td>
   </tr>
 </table>
