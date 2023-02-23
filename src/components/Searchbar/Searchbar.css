@@ -3,11 +3,24 @@
   display: flex;
   justify-content: space-evenly;
   border: 1px solid black;
-  padding: 1% 0
+  padding: 1% 0;
+  background-color: rgb(115, 178, 246)
+}
+
+.searchbar-left,
+.searchbar-right {
+  width: 40%
 }
 
 .search {
-  margin-left: 10px
+  font-family: 'Cormorant Garamond', serif;
+  margin-left: 10px;
+  font-size: 20px;
+  width: 70%
+}
+
+.search-label {
+  font-size: 20px;
 }
 
 .filter {

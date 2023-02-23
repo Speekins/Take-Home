@@ -12,6 +12,10 @@ const Modal = ({ modal, setModal }) => {
       return newDate.toString().slice(0, 15)
     }
 
+    function cleanAuthorInfo(byline) {
+      return byline.replace('By ', '')
+    }
+
     return (
       <div className='modal-container'>
         <div className='modal'>
@@ -20,7 +24,7 @@ const Modal = ({ modal, setModal }) => {
           </span>
           <h1 className='modal-header'>{modal.title}</h1>
           <div>
-            <p><b>By:</b>: {modal.byline}</p>
+            <p><b>By</b>: {cleanAuthorInfo(modal.byline)}</p>
             <p><b>Published</b>: {timeConverter(modal.published_date)}</p>
           </div>
           <div className='modal-synopsis'>
