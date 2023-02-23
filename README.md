@@ -196,11 +196,11 @@ MVP
 
 Stretch Goals
 
-* Add friends feature, allowing a User to add friends and see that friend's games instead of all User's games.
-* Implement User authentication using a OAuth provider.
-* Create board game parties, where friends can arrange get togethers to play a certain game.
-* Ability to add comments or reviews to games you have, or have borrowed.
-* Email notifications for requests to borrow games.
+* Save articles the user is interested in.
+* Build backend for storage of user's favorite articles
+* Implement TypeScript.
+* User creation, editing, deleting
+* User authentication
 
 See the [open issues](https://github.com/speekins/take-home/issues) for a full list of proposed features (and known issues).
 
