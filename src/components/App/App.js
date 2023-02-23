@@ -4,6 +4,7 @@ import { getArticlesByGenre } from '../../apiCalls'
 import Searchbar from '../Searchbar/Searchbar'
 import Main from '../Main/Main'
 import Modal from '../Modal/Modal'
+import headerPhoto from '../../assets/newspaper_header2.jpg'
 import './App.css'
 
 const initialState = {
@@ -51,9 +52,10 @@ const App = () => {
   }
 
   return (
-    <main>
+    <>
       <div className='welcome-header'>
         <h1>NOOZ</h1>
+        <div className='header-photo'></div>
       </div>
       {state.modal && <Modal modal={state.modal} setModal={setModal} />}
       <Searchbar getArticles={getArticles} filterCurrentArticlesByTitle={filterCurrentArticlesByTitle} />
@@ -63,7 +65,7 @@ const App = () => {
         setModal={setModal}
         loading={state.loading}
       />
-    </main>
+    </>
   )
 }
 

@@ -21,7 +21,7 @@ const Searchbar = ({ getArticles, filterCurrentArticlesByTitle }) => {
   }
 
   const selections =
-    <select name="filter" id="filter" value={filterValue} onChange={(event) => handleChange(event)}>
+    <select name="filter" className='filter' id="filter" value={filterValue} onChange={(event) => handleChange(event)}>
       <option value="arts">Arts</option>
       <option value="automobiles">Automobiles</option>
       <option value="books">Books</option>
@@ -52,7 +52,7 @@ const Searchbar = ({ getArticles, filterCurrentArticlesByTitle }) => {
         {selections}
       </div>
       <div className='searchbar-right'>
-        <label htmlFor='search'>Filter Results</label>
+        <label htmlFor='search' className='search-label'>Filter Results</label>
         <input className='search' name='search' onChange={(event) => handleSearch(event)}></input>
       </div>
     </div>

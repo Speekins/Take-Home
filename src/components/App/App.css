@@ -1,11 +1,18 @@
-main {
-  padding: 0 2%;
+.welcome-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-family: 'Londrina Shadow', cursive;
+  font-size: 60px;
+  margin: 0;
+  padding-top: 0
 }
 
-.welcome-header {
-  font-family: 'Londrina Shadow', cursive;
-  font-size: 50px;
-  margin-left: 10%;
-  margin-top: 0;
-  padding-top: 0
+.header-photo {
+  width: 70%;
+  height: auto;
+  background-image: url('../../assets/newspaper_header2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

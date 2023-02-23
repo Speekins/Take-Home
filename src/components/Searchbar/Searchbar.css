@@ -1,6 +1,22 @@
 .searchbar-container {
-  width: 100%;
-  height: 10%;
+  min-width: 100%;
   display: flex;
   justify-content: space-evenly;
+  border: 1px solid black;
+  padding: 1% 0
+}
+
+.search {
+  margin-left: 10px
+}
+
+.filter {
+  font-family: 'Cormorant Garamond', serif;
+  border: 1px solid black;
+  background: none;
+  font-size: 20px;
+}
+
+filter:hover {
+  cursor: pointer;
 }

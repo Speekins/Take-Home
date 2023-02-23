@@ -26,6 +26,7 @@ const Modal = ({ modal, setModal }) => {
           <div className='modal-synopsis'>
             <p>{modal.abstract}</p>
           </div>
+          <a href={modal.url} target='_blank' rel='noreferrer'>See More</a>
           <div className='modal-details'>
             <img className='modal-cover' alt="Cover" src={modal.multimedia[0].url} />
           </div>
