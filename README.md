@@ -229,12 +229,12 @@ Distributed under the MIT License.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/board-together/FE-Board-Together.svg?style=for-the-badge
-[contributors-url]: https://github.com/board-together/FE-Board-Together/graphs/contributors
+[contributors-url]: https://github.com/speekins/Take-Home/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/board-together/FE-Board-Together.svg?style=for-the-badge
-[forks-url]: https://github.com/board-together/FE-Board-Together/network/members
+[forks-url]: https://github.com/speekins/Take-Home/network/members
 [stars-shield]: https://img.shields.io/github/stars/board-together/FE-Board-Together.svg?style=for-the-badge
-[stars-url]: https://github.com/board-together/FE-Board-Together/stargazers
+[stars-url]: https://github.com/speekins/Take-Home/stargazers
 [issues-shield]: https://img.shields.io/github/issues/board-together/FE-Board-Together.svg?style=for-the-badge
-[issues-url]: https://github.com/speekins/take-home/issues
+[issues-url]: https://github.com/speekins/Take-Home/issues
 [license-shield]: https://img.shields.io/github/license/board-together/FE-Board-Together.svg?style=for-the-badge
 [license-url]: https://github.com/board-together/FE-Board-Together/blob/master/LICENSE.txt
