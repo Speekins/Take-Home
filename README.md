@@ -33,7 +33,6 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-          <li><a href="#repositories">Repositories</a></li>
           <li><a href="#frontend-repository-installation">Frontend Repository Installation</a></li>
           <li><a href="#available-endpoints">Available Endpoints</a></li>
       </ul>
@@ -101,9 +100,12 @@ Nooz is a FrontEnd application utilizing a React, maintained integration with Ci
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- Available Endpoints -->
-## Endpoint(s)
+## Available Endpoints
 The application accesses a single endpoint with a variety of queries:<br>
-*Example* https://api.nytimes.com/svc/topstories/v2/home.json?api-key={INSERT_API_KEY_HERE}
+*Example* https://api.nytimes.com/svc/topstories/v2/{QUERY_FIELD}.json?api-key={INSERT_API_KEY_HERE}
+
+Queries By Section:
+The possible section value are: `arts`, `automobiles`, `books`, `business`, `fashion`, `food`, `health`, `home`, `insider`, `magazine`, `movies`, `nyregion`, `obituaries`, `opinion`, `politics`, `realestate`, `science`, `sports`, `sundayreview`, `technology`, `theater`, `t-magazine`, `travel`, `upshot`, `us`, and `world`.
 
 Expected Response:
 
