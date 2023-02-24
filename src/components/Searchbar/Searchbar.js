@@ -1,16 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import './Searchbar.css'
 
 
 
-const Searchbar = props => {
+const Searchbar = ({ getArticles }) => {
 
   const [searchTerm, setSearchTerm] = useState('')
   const [filterValue, setFilterValue] = useState('home')
 
+  useEffect(() => {
+    getArticles(filterValue)
+  }, [filterValue])
+
+  const handleChange = (e) => {
+    setFilterValue(e.target.value)
+  }
+
   const selections =
-    <select name="filter" id="filter" value=''>
+    <select name="filter" id="filter" value={filterValue} onChange={(event) => handleChange(event)}>
       <option value="">Select A Genre</option>
       <option value="arts">Arts</option>
       <option value="automobiles">Automobiles</option>
@@ -42,7 +50,7 @@ const Searchbar = props => {
         {selections}
       </div>
       <div className='searchbar-right'>
-        <label for='search'>Filter Results</label>
+        <label htmlFor='search'>Filter Results</label>
         <input className='search' name='search'></input>
       </div>
     </div>

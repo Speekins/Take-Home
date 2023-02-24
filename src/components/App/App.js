@@ -16,6 +16,7 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "success": return { ...state, articles: action.payload, loading: false }
+    case "loading": return { ...state, loading: true }
     default: return { ...state }
   }
 }
@@ -30,12 +31,18 @@ const App = () => {
       .then(response => dispatch({ type: "success", payload: response.results }))
   }, [])
 
+  const getArticles = (genre) => {
+    dispatch({ type: "loading" })
+    getArticlesByGenre(genre)
+      .then(response => dispatch({ type: "success", payload: response.results }))
+  }
+
   return (
     <>
       <div className='welcome-header'>
         <h1>This is the App!</h1>
       </div>
-      <Searchbar />
+      <Searchbar getArticles={getArticles} />
       <Main
         articles={state.articles}
         filteredArticles={state.filteredArticles}

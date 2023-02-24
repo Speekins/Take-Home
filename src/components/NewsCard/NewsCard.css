@@ -4,6 +4,10 @@
   border: 1px black solid
 }
 
+.single-news-card:hover {
+  cursor: pointer;
+}
+
 .news-card-img {
   width: 100%;
   height: auto
