@@ -13,10 +13,10 @@ const Main = ({ articles, filteredArticles, loading, setModal }) => {
 
   if (!!filteredArticles) {
     const cleanData = filteredArticles.filter(article => !!article.title)
-    const formattedArticles = cleanData.map(article =>
+    const formattedArticles = cleanData.map((article, idx) =>
       <NewsCard
         article={article}
-        key={article.created_date}
+        key={idx}
         setModal={setModal}
       />)
 
@@ -28,10 +28,10 @@ const Main = ({ articles, filteredArticles, loading, setModal }) => {
   }
 
   const cleanData = articles.filter(article => !!article.title)
-  const formattedArticles = cleanData.map(article =>
+  const formattedArticles = cleanData.map((article, idx) =>
     <NewsCard
       article={article}
-      key={article.created_date}
+      key={idx}
       setModal={setModal}
     />)
 
