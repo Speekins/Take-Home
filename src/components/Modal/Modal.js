@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './Modal.css'
 
 const Modal = ({ modal, setModal }) => {
@@ -49,6 +50,11 @@ const Modal = ({ modal, setModal }) => {
       </div>
     )
   }
+}
+
+Modal.propTypes = {
+  modal: PropTypes.object,
+  setModal: PropTypes.func
 }
 
 export default Modal;
