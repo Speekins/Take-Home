@@ -1,7 +1,7 @@
 describe('Filter and search functionality', () => {
   beforeEach(() => {
     cy.intercept(
-      'https://api.nytimes.com/svc/topstories/v2/home.json?api-key=OVAGeCoI4G285YyTXNDwGpYOsV0H55eA',
+      `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=OVAGeCoI4G285YyTXNDwGpYOsV0H55eA`,
       { fixture: 'home.json' }
     )
     cy.visit('http://localhost:3000')
@@ -9,7 +9,7 @@ describe('Filter and search functionality', () => {
 
   it('should be able to filter by news section', () => {
     cy.intercept(
-      'https://api.nytimes.com/svc/topstories/v2/movies.json?api-key=OVAGeCoI4G285YyTXNDwGpYOsV0H55eA',
+      `https://api.nytimes.com/svc/topstories/v2/movies.json?api-key=OVAGeCoI4G285YyTXNDwGpYOsV0H55eA`,
       { fixture: 'movies.json' }
     )
     cy.get('.filter').select('movies')
