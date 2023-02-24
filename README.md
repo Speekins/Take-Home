@@ -53,8 +53,7 @@ Nooz is an information and news application for accessing trending NYT articles 
 
 <!-- Screenshots/GIFS -->
 ### Application Showcase
-
-
+![NOOZ](https://user-images.githubusercontent.com/74210902/221106627-fb802c1e-e9d3-4410-9862-43e6507db41b.gif)
 
 ### Planning 
 ![image](https://user-images.githubusercontent.com/74210902/221105532-40690010-d68b-4b29-b8d7-b141d71be2d7.png)
