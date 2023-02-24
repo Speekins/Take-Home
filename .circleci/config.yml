@@ -1,38 +1,26 @@
 version: 2.1
+
 orbs:
-  circleci-cli: circleci/circleci-cli@0.1.9
+  node: circleci/node@5.0.3
+  cypress: cypress-io/cypress@2.2.0
+
 jobs:
   build:
-    docker:
-      - image: cimg/node:16.14.2
-
-    working_directory: ~/repo
-
+    executor: node/default
     steps:
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
-      - run: npm ci
-
-      - save_cache:
+      - node/install-packages:
+          pkg-manager: npm
+      - run:
+          name: Run build
+          command: npm run build
+      - persist_to_workspace:
+          root: ~/project
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      # we need to install CircleCI CLI tool
-      # to run the "manual" tests
-      - circleci-cli/install
-      - run: npm test
-      - run: npm run manual:tests
-      - run: npm run docs
-
+            - .
 workflows:
-  orb_tests:
+  test_my_app:
     jobs:
+      - cypress/run:
+          start: npm start
       - build
