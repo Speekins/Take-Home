@@ -1,0 +1,193 @@
+{
+  "status": "OK",
+  "copyright": "Copyright (c) 2023 The New York Times Company. All Rights Reserved.",
+  "section": "Movies",
+  "last_updated": "2023-02-23T22:17:10-05:00",
+  "num_results": 33,
+  "results": [
+    {
+      "section": "movies",
+      "subsection": "",
+      "title": "She’s Oscar-Nominated, but Hong Chau Hopes to Stay an Underdog",
+      "abstract": "Up for best supporting actress for “The Whale,” she never dreamed of being a performer. But she has turned into “a force of nature,” says Brendan Fraser.",
+      "url": "https://www.nytimes.com/2023/02/22/movies/hong-chau-the-whale-oscars.html",
+      "uri": "nyt://article/e994832b-fc7d-535c-9d71-9dc97c35b77f",
+      "byline": "By Kyle Buchanan",
+      "item_type": "Article",
+      "updated_date": "2023-02-23T12:19:40-05:00",
+      "created_date": "2023-02-22T13:50:02-05:00",
+      "published_date": "2023-02-22T13:50:02-05:00",
+      "material_type_facet": "",
+      "kicker": "The Projectionist",
+      "des_facet": [
+        "Actors and Actresses",
+        "Content Type: Personal Profile",
+        "Movies",
+        "Academy Awards (Oscars)",
+        "Downsizing (Movie)",
+        "The Menu (Movie)",
+        "The Whale (Movie)"
+      ],
+      "org_facet": [],
+      "per_facet": [
+        "Chau, Hong (Actor)",
+        "Fraser, Brendan"
+      ],
+      "geo_facet": [],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/23/multimedia/22hong-chau-02-cjfv/22hong-chau-02-cjfv-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 2000,
+          "width": 1600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "After struggling for roles, Hong Chau said the academy nod has put her in a weird place: “I still feel so new and I’m still learning, so I hope this doesn’t mean that people think I know what I’m doing.”",
+          "copyright": "Justin J Wee for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/23/multimedia/22hong-chau-02-cjfv/22hong-chau-02-cjfv-threeByTwoSmallAt2X-v2.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "After struggling for roles, Hong Chau said the academy nod has put her in a weird place: “I still feel so new and I’m still learning, so I hope this doesn’t mean that people think I know what I’m doing.”",
+          "copyright": "Justin J Wee for The New York Times"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/23/multimedia/22hong-chau-02-cjfv/22hong-chau-02-cjfv-thumbLarge-v2.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "After struggling for roles, Hong Chau said the academy nod has put her in a weird place: “I still feel so new and I’m still learning, so I hope this doesn’t mean that people think I know what I’m doing.”",
+          "copyright": "Justin J Wee for The New York Times"
+        }
+      ],
+      "short_url": "https://nyti.ms/41l3CRa"
+    },
+    {
+      "section": "movies",
+      "subsection": "",
+      "title": "Film Artists Reflect on the Movies that Left a Mark",
+      "abstract": "For a retrospective series at the Berlin International Film Festival, directors and actors selected formative coming-of-age movies. Their choices show links between the cinematic past and present.",
+      "url": "https://www.nytimes.com/2023/02/23/movies/berlinale-retrospective-young-at-heart.html",
+      "uri": "nyt://article/f7f50391-51fb-512a-b60e-02f4cb483753",
+      "byline": "By Beatrice Loayza",
+      "item_type": "Article",
+      "updated_date": "2023-02-23T18:11:55-05:00",
+      "created_date": "2023-02-23T09:03:59-05:00",
+      "published_date": "2023-02-23T09:03:59-05:00",
+      "material_type_facet": "",
+      "kicker": "Critic’s Notebook",
+      "des_facet": [
+        "Berlin International Film Festival",
+        "Movies"
+      ],
+      "org_facet": [],
+      "per_facet": [
+        "Akerman, Chantal",
+        "Coolidge, Martha",
+        "Diaz, Lav",
+        "Hawke, Ethan",
+        "Sciamma, Celine",
+        "Stewart, Kristen",
+        "Spielberg, Steven",
+        "Swinton, Tilda"
+      ],
+      "geo_facet": [],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/23/multimedia/23BERLINALE-RETROSPECTIVE-01-fbjq/23BERLINALE-RETROSPECTIVE-01-fbjq-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 1361,
+          "width": 2048,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "From left: Christina Ricci, Ashleigh Aston Moore, Gaby Hoffmann and Thora Birch in “Now and Then,” which is playing in a retrospective at the Berlin International Film Festival.",
+          "copyright": "via Park Circus"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/23/multimedia/23BERLINALE-RETROSPECTIVE-01-fbjq/23BERLINALE-RETROSPECTIVE-01-fbjq-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "From left: Christina Ricci, Ashleigh Aston Moore, Gaby Hoffmann and Thora Birch in “Now and Then,” which is playing in a retrospective at the Berlin International Film Festival.",
+          "copyright": "via Park Circus"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/23/multimedia/23BERLINALE-RETROSPECTIVE-01-fbjq/23BERLINALE-RETROSPECTIVE-01-fbjq-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "From left: Christina Ricci, Ashleigh Aston Moore, Gaby Hoffmann and Thora Birch in “Now and Then,” which is playing in a retrospective at the Berlin International Film Festival.",
+          "copyright": "via Park Circus"
+        }
+      ],
+      "short_url": "https://nyti.ms/3InU3Il"
+    },
+    {
+      "section": "movies",
+      "subsection": "",
+      "title": "‘Dancing the Twist in Bamako’ Review: Youth in Revolt",
+      "abstract": "Robert Guédiguian’s jaunty new film places a young romance against the backdrop of post-colonial Mali in the early 1960s.",
+      "url": "https://www.nytimes.com/2023/02/22/movies/dancing-the-twist-in-bamako-review.html",
+      "uri": "nyt://article/36f9550d-fe85-58a6-9ec2-05f3cf71871e",
+      "byline": "By A.O. Scott",
+      "item_type": "Article",
+      "updated_date": "2023-02-23T16:54:29-05:00",
+      "created_date": "2023-02-22T20:59:51-05:00",
+      "published_date": "2023-02-22T20:59:51-05:00",
+      "material_type_facet": "",
+      "kicker": "",
+      "des_facet": [
+        "Movies",
+        "Dancing the Twist in Bamako (Movie)"
+      ],
+      "org_facet": [],
+      "per_facet": [
+        "Guediguian, Robert"
+      ],
+      "geo_facet": [],
+      "multimedia": [
+        {
+          "url": "https://static01.nyt.com/images/2023/02/23/multimedia/23dancing-the-twist-review-qzjv/23dancing-the-twist-review-qzjv-superJumbo.jpg",
+          "format": "Super Jumbo",
+          "height": 871,
+          "width": 1050,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Alice Da Luz, left, as Lara and Stéphane Bak as Samba, who spends his days spreading the Marxist gospel to Mali’s peasants and landowners.",
+          "copyright": "ArtMattan Films"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/23/multimedia/23dancing-the-twist-review-qzjv/23dancing-the-twist-review-qzjv-threeByTwoSmallAt2X.jpg",
+          "format": "threeByTwoSmallAt2X",
+          "height": 400,
+          "width": 600,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Alice Da Luz, left, as Lara and Stéphane Bak as Samba, who spends his days spreading the Marxist gospel to Mali’s peasants and landowners.",
+          "copyright": "ArtMattan Films"
+        },
+        {
+          "url": "https://static01.nyt.com/images/2023/02/23/multimedia/23dancing-the-twist-review-qzjv/23dancing-the-twist-review-qzjv-thumbLarge.jpg",
+          "format": "Large Thumbnail",
+          "height": 150,
+          "width": 150,
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Alice Da Luz, left, as Lara and Stéphane Bak as Samba, who spends his days spreading the Marxist gospel to Mali’s peasants and landowners.",
+          "copyright": "ArtMattan Films"
+        }
+      ],
+      "short_url": "https://nyti.ms/3IqrRVj"
+    }
+  ]
+}
