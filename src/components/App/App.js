@@ -3,7 +3,7 @@ import { getArticlesByGenre } from '../../apiCalls'
 import Searchbar from '../Searchbar/Searchbar'
 import Main from '../Main/Main'
 import Modal from '../Modal/Modal'
-import './App.css'
+import './App.css';
 
 const initialState = {
   articles: null,

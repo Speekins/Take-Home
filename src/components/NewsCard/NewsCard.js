@@ -1,6 +1,6 @@
 import React from 'react'
 import noImage from '../../assets/No_Image_Available.jpg'
-import './NewsCard.css'
+import './NewsCard.css';
 
 export const NewsCard = ({ article, setModal }) => {
 

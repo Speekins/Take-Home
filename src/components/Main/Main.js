@@ -1,6 +1,6 @@
 import React from 'react'
 import { NewsCard } from '../NewsCard/NewsCard'
-import './Main.css'
+import './Main.css';
 
 const Main = ({ articles, filteredArticles, loading, setModal }) => {
 

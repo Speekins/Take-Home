@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import './Searchbar.css'
+import './Searchbar.css';
 
 const Searchbar = ({ getArticles, filterCurrentArticlesByTitle }) => {
 
