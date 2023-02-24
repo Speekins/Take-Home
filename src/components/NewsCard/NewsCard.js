@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import noImage from '../../assets/No_Image_Available.jpg'
 import './NewsCard.css'
 
@@ -12,5 +11,3 @@ export const NewsCard = ({ article, setModal }) => {
     </div>
   )
 }
-
-NewsCard.propTypes = {}

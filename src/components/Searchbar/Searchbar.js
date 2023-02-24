@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import './Searchbar.css'
-
-
 
 const Searchbar = ({ getArticles, filterCurrentArticlesByTitle }) => {
 
@@ -59,35 +56,4 @@ const Searchbar = ({ getArticles, filterCurrentArticlesByTitle }) => {
   )
 }
 
-Searchbar.propTypes = {}
-
 export default Searchbar
-
-/*
-arts, 
-automobiles, 
-books, 
-business, 
-fashion,
-food, 
-health, 
-home, 
-insider, 
-magazine, 
-movies, 
-nyregion, 
-obituaries, 
-opinion, 
-politics, 
-realestate, 
-science, 
-sports, 
-sundayreview, 
-technology, 
-theater, 
-t-magazine, 
-travel, 
-upshot,
-us, 
-world
-*/

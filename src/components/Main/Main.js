@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { NewsCard } from '../NewsCard/NewsCard'
 import './Main.css'
 
@@ -41,7 +40,5 @@ const Main = ({ articles, filteredArticles, loading, setModal }) => {
     </div>
   )
 }
-
-Main.propTypes = {}
 
 export default Main

@@ -1,10 +1,8 @@
 import React, { useReducer, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import { getArticlesByGenre } from '../../apiCalls'
 import Searchbar from '../Searchbar/Searchbar'
 import Main from '../Main/Main'
 import Modal from '../Modal/Modal'
-import headerPhoto from '../../assets/newspaper_header2.jpg'
 import './App.css'
 
 const initialState = {

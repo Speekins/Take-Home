@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import './Modal.css'
 
 const Modal = ({ modal, setModal }) => {
@@ -51,7 +50,5 @@ const Modal = ({ modal, setModal }) => {
     )
   }
 }
-
-Modal.propTypes = {}
 
 export default Modal
