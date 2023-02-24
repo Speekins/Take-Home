@@ -1,7 +1,7 @@
 describe('modal', () => {
   beforeEach(() => {
     cy.intercept(
-      'https://api.nytimes.com/svc/topstories/v2/home.json?api-key=OVAGeCoI4G285YyTXNDwGpYOsV0H55eA',
+      `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=OVAGeCoI4G285YyTXNDwGpYOsV0H55eA`,
       { fixture: 'home.json' }
     )
     cy.visit('http://localhost:3000')
