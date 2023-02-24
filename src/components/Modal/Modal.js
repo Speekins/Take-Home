@@ -1,19 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { timeConverter, cleanAuthorInfo } from '../../utils'
 import './Modal.css'
 
 const Modal = ({ modal, setModal }) => {
 
   if (modal) {
-
-    function timeConverter(date) {
-      date = new Date("2023-02-21T05:00:37-05:00")
-      let newDate = new Date(date)
-      return newDate.toString().slice(0, 15)
-    }
-
-    function cleanAuthorInfo(byline) {
-      return byline.replace('By ', '')
-    }
 
     return (
       <div className='modal-container'>
@@ -43,7 +35,7 @@ const Modal = ({ modal, setModal }) => {
         <div className='modal'>
           <span className='close-button-container'>
             <button className='close-modal' onClick={setModal}>X</button>
-            <h1 className='no-books-warngin'>Something went wrong...</h1>
+            <h1 className='warning'>Something went wrong...</h1>
           </span>
         </div>
       </div>
@@ -51,4 +43,9 @@ const Modal = ({ modal, setModal }) => {
   }
 }
 
-export default Modal;
+Modal.propTypes = {
+  modal: PropTypes.object,
+  setModal: PropTypes.func
+}
+
+export default Modal
