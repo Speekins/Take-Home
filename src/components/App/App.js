@@ -1,9 +1,9 @@
-import React, { useReducer, useEffect } from 'react'
+import React, { useReducer, useEffect, useCallback } from 'react'
 import { getArticlesByGenre } from '../../apiCalls'
 import Searchbar from '../Searchbar/Searchbar'
 import Main from '../Main/Main'
 import Modal from '../Modal/Modal'
-import './App.css';
+import './App.css'
 
 const initialState = {
   articles: null,
@@ -34,25 +34,24 @@ const App = () => {
   useEffect(() => {
     getArticlesByGenre('home')
       .then(response => {
-        console.log(response)
         dispatch({ type: "success", payload: response.results })
       })
   }, [])
 
-  const getArticles = (genre) => {
+  const getArticles = useCallback((genre) => {
     dispatch({ type: "loading" })
     getArticlesByGenre(genre)
       .then(response => dispatch({ type: "success", payload: response.results }))
-  }
+  }, [])
 
-  const filterCurrentArticlesByTitle = (term) => {
+  const filterCurrentArticlesByTitle = useCallback((term) => {
     if (!term) {
-      console.log(term)
       dispatch({ type: "search" })
+    } else {
+      const newSet = state.articles.filter(article => article.title.toLowerCase().includes(term.toLowerCase()))
+      dispatch({ type: "search", payload: newSet })
     }
-    const newSet = state.articles.filter(article => article.title.toLowerCase().includes(term.toLowerCase()))
-    dispatch({ type: "search", payload: newSet })
-  }
+  }, [state.articles])
 
   const setModal = (createdDate) => {
     let modalArticle = state.articles.find(article => article.created_date === createdDate)
