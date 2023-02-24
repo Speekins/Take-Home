@@ -4,7 +4,6 @@ import Searchbar from '../Searchbar/Searchbar'
 import Main from '../Main/Main'
 import Modal from '../Modal/Modal'
 import './App.css'
-import { useLinkClickHandler } from 'react-router-dom'
 
 const initialState = {
   articles: null,
