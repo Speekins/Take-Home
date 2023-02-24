@@ -69,3 +69,73 @@ export const getArticlesByGenre = (genre) => {
 //   ],
 //   "short_url": "https://nyti.ms/41bEMD0"
 //   }
+
+{
+  "status": "OK",
+    "copyright": "Copyright (c) 2023 The New York Times Company. All Rights Reserved.",
+      "section": "home",
+        "last_updated": "2023-02-23T12:59:16-05:00",
+          "num_results": 31,
+            "results": [
+              {
+                "section": "world",
+                "subsection": "",
+                "title": "The West Tried to Isolate Russia. It Didn’t Work.",
+                "abstract": "The West never won over as much of the world as it initially seemed. Here’s how Russia is taking advantage of a fragmented world.",
+                "url": "https://www.nytimes.com/interactive/2023/02/23/world/russia-ukraine-geopolitics.html",
+                "uri": "nyt://interactive/883c467a-375c-5af0-8dee-e6d9cbbfe4b3",
+                "byline": "By Josh Holder, Lauren Leatherby, Anton Troianovski and Weiyi Cai",
+                "item_type": "Interactive",
+                "updated_date": "2023-02-23T11:52:42-05:00",
+                "created_date": "2023-02-23T09:46:18-05:00",
+                "published_date": "2023-02-23T09:46:18-05:00",
+                "material_type_facet": "",
+                "kicker": "",
+                "des_facet": [
+                  "Russian Invasion of Ukraine (2022)",
+                  "Diplomatic Service, Embassies and Consulates",
+                  "internal-sub-only"
+                ],
+                "org_facet": [
+                  "North Atlantic Treaty Organization"
+                ],
+                "per_facet": [],
+                "geo_facet": [
+                  "Ukraine"
+                ],
+                "multimedia": [
+                  {
+                    "url": "https://static01.nyt.com/images/2023/02/23/world/russia-ukraine-geopolitics-promo/russia-ukraine-geopolitics-promo-superJumbo-v5.png",
+                    "format": "Super Jumbo",
+                    "height": 1333,
+                    "width": 2000,
+                    "type": "image",
+                    "subtype": "photo",
+                    "caption": "",
+                    "copyright": ""
+                  },
+                  {
+                    "url": "https://static01.nyt.com/images/2023/02/23/world/russia-ukraine-geopolitics-promo/russia-ukraine-geopolitics-promo-threeByTwoSmallAt2X-v9.png",
+                    "format": "threeByTwoSmallAt2X",
+                    "height": 400,
+                    "width": 600,
+                    "type": "image",
+                    "subtype": "photo",
+                    "caption": "",
+                    "copyright": ""
+                  },
+                  {
+                    "url": "https://static01.nyt.com/images/2023/02/23/world/russia-ukraine-geopolitics-promo/russia-ukraine-geopolitics-promo-thumbLarge-v5.png",
+                    "format": "Large Thumbnail",
+                    "height": 150,
+                    "width": 150,
+                    "type": "image",
+                    "subtype": "photo",
+                    "caption": "",
+                    "copyright": ""
+                  }
+                ],
+                "short_url": "https://nyti.ms/41ni9vG"
+              }
+            ]
+}

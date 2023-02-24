@@ -18,7 +18,10 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "success": return { ...state, articles: action.payload, filteredArticles: null, loading: false }
-    case "search": return { ...state, filteredArticles: action.payload }
+    case "search": {
+      if (!action.payload) return { ...state, filteredArticles: null }
+      return { ...state, filteredArticles: action.payload }
+    }
     case "modal": return { ...state, modal: !state.modal ? action.payload : null }
     case "loading": return { ...state, loading: true }
     default: return { ...state }
@@ -42,6 +45,10 @@ const App = () => {
   }
 
   const filterCurrentArticlesByTitle = (term) => {
+    if (!term) {
+      console.log(term)
+      dispatch({ type: "search" })
+    }
     const newSet = state.articles.filter(article => article.title.toLowerCase().includes(term.toLowerCase()))
     dispatch({ type: "search", payload: newSet })
   }

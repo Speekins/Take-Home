@@ -1,7 +1,8 @@
 .single-news-card {
   width: 300px;
   height: auto;
-  border: 1px black solid
+  border: 1px black solid;
+  transition-duration: 300ms;
 }
 
 .single-news-card:hover {
@@ -10,5 +11,5 @@
 
 .news-card-img {
   max-width: 100%;
-  max-height: auto
+  max-height: 1
 }
