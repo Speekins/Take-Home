@@ -4,9 +4,8 @@ import './Searchbar.css'
 
 
 
-const Searchbar = ({ getArticles }) => {
+const Searchbar = ({ getArticles, filterCurrentArticlesByTitle }) => {
 
-  const [searchTerm, setSearchTerm] = useState('')
   const [filterValue, setFilterValue] = useState('home')
 
   useEffect(() => {
@@ -17,9 +16,12 @@ const Searchbar = ({ getArticles }) => {
     setFilterValue(e.target.value)
   }
 
+  const handleSearch = (e) => {
+    filterCurrentArticlesByTitle(e.target.value)
+  }
+
   const selections =
-    <select name="filter" id="filter" value={filterValue} onChange={(event) => handleChange(event)}>
-      <option value="">Select A Genre</option>
+    <select name="filter" className='filter' id="filter" value={filterValue} onChange={(event) => handleChange(event)}>
       <option value="arts">Arts</option>
       <option value="automobiles">Automobiles</option>
       <option value="books">Books</option>
@@ -50,8 +52,8 @@ const Searchbar = ({ getArticles }) => {
         {selections}
       </div>
       <div className='searchbar-right'>
-        <label htmlFor='search'>Filter Results</label>
-        <input className='search' name='search'></input>
+        <label htmlFor='search' className='search-label'>Filter Results</label>
+        <input className='search' name='search' onChange={(event) => handleSearch(event)}></input>
       </div>
     </div>
   )
