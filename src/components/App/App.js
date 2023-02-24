@@ -35,7 +35,10 @@ const App = () => {
 
   useEffect(() => {
     getArticlesByGenre('home')
-      .then(response => dispatch({ type: "success", payload: response.results }))
+      .then(response => {
+        console.log(response)
+        dispatch({ type: "success", payload: response.results })
+      })
   }, [])
 
   const getArticles = (genre) => {
@@ -61,7 +64,7 @@ const App = () => {
   return (
     <>
       <div className='welcome-header'>
-        <h1>NOOZ</h1>
+        <h1 className='app-name'>NOOZ</h1>
         <div className='header-photo'></div>
       </div>
       {state.modal && <Modal modal={state.modal} setModal={setModal} />}
